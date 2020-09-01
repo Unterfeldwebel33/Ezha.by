@@ -16,7 +16,7 @@
         android:backgroundTint="@color/buttoncolor"
         android:fontFamily="@font/montserrat"
         android:textStyle="bold"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:letterSpacing="0"
         android:minHeight="60dp"
         android:text="@string/startbutton"
