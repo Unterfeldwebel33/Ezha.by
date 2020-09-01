@@ -1,5 +1,6 @@
 package com.example.ezhaby
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
+import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +43,20 @@ class MainActivity : AppCompatActivity() {
         introSliderViewPager.adapter = introSliderAdapter
         setupIndicators()
         setCurrentIndicator(0)
+        introSliderViewPager.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback(){
+
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                setCurrentIndicator(position)
+            }
+        })
+        buttonSkip.setOnClickListener{
+            Intent(applicationContext, FoodcourtActivity:: class.java).also {
+                startActivity(it)
+                finish()
+            }
+        }
     }
 
     private fun setupIndicators() {
