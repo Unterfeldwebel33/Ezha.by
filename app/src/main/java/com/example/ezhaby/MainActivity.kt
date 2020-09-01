@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
         val layoutParams: LinearLayout.LayoutParams =
             LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-        layoutParams.setMargins(8,0,8,0)
+        layoutParams.setMargins(15,0,15,0)
         for (i in indicators.indices) {
             indicators[i] = ImageView(applicationContext)
             indicators[i].apply {

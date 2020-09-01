@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Ezha</string>
     <string name="startbutton">Выбрать фудкорт</string>
-
+    <string name="AllFoodCourt">Все фудкорты</string>
 </resources>
