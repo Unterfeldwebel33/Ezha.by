@@ -31,7 +31,7 @@ public class FoodcourtActivity extends AppCompatActivity {
         sortRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
 
         ArrayList<SortHelperClass> sortLocations = new ArrayList<>();
-        sortLocations.add(new SortHelperClass(R.drawable.ic_controls,""));
+        sortLocations.add(new SortHelperClass(R.drawable.ic_controls1,""));
         sortLocations.add(new SortHelperClass(R.drawable.ic_fake,"Бургеры"));
         sortLocations.add(new SortHelperClass(R.drawable.ic_fake,"Суши"));
         sortLocations.add(new SortHelperClass(R.drawable.ic_fake,"Пицца"));
