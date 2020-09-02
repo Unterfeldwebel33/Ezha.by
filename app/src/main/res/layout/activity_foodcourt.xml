@@ -47,10 +47,16 @@
 
         </RelativeLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sortRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_margin="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/sliceColor"/>
         
         <TextView
@@ -86,15 +92,18 @@
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_margin="20dp"
                 android:backgroundTint="@color/bodycolor"
-                app:backgroundTint="@color/bodycolor"
-               />
+                android:clickable="false"
+                android:contentDescription="like"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:backgroundTint="@color/bodycolor">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         </RelativeLayout>
 
@@ -119,14 +128,14 @@
             android:textStyle="bold"></TextView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/bodycolor"
             app:backgroundTint="@color/bodycolor"
+            android:src="@drawable/ic_baseline_favorite_border_24"
             />
 
     </RelativeLayout>
@@ -152,14 +161,15 @@
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/bodycolor"
                 app:backgroundTint="@color/bodycolor"
+                android:src="@drawable/ic_baseline_favorite_border_24"
                 />
 
         </RelativeLayout>
@@ -185,14 +195,15 @@
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/bodycolor"
                 app:backgroundTint="@color/bodycolor"
+                android:src="@drawable/ic_baseline_favorite_border_24"
                 />
 
         </RelativeLayout>

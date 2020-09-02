@@ -2,4 +2,10 @@
     <string name="app_name">Ezha</string>
     <string name="startbutton">Выбрать фудкорт</string>
     <string name="AllFoodCourt">Все фудкорты</string>
+    <string name="Burgers">Бургеры</string>
+    <string name="Sushi">Суши</string>
+    <string name="Pizza">Пицца</string>
+    <string name="Desserts">Десерты</string>
+    <string name="WOK">Лапша WOK</string>
+    <string name="Donner">Шаурма</string>
 </resources>
