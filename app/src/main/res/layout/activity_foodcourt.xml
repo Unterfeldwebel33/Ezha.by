@@ -29,8 +29,8 @@
                 android:layout_height="wrap_content"
                 android:text="Фудкорты"
                 android:textColor="@color/textPrimary"
-                android:fontFamily="@font/montserrat"
-                android:textFontWeight="700"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textFontWeight="800"
                 android:textSize="16sp"
                 android:gravity="center"
                 android:layout_centerVertical="true"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/AllFoodCourt"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_semibold"
             android:textSize="24sp"
             android:layout_marginLeft="15dp"
             android:textStyle="bold"
@@ -85,10 +85,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="MOMO"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="ТЦ МОМО"
                 android:textColor="@color/textSecondary"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -121,10 +121,10 @@
             android:layout_marginLeft="20dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Galileo"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="ТЦ Galileo"
             android:textColor="@color/textSecondary"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -154,10 +154,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Galleria Minsk"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="ТЦ Galleria Minsk"
                 android:textColor="@color/textSecondary"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -188,10 +188,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Palazzo"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="ТЦ Palazzo"
                 android:textColor="@color/textSecondary"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"></TextView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton

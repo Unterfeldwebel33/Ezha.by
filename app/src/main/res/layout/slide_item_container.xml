@@ -22,16 +22,16 @@
         android:layout_marginBottom="15dp"
         android:text="Title text"
         android:textColor="@color/textPrimary"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/montserrat_medium"
         android:gravity="center"
         android:text="Description Text"
         android:textColor="@color/textDescription"
-        android:textSize="14.5sp" />
+        android:textSize="14sp" />
 </LinearLayout>

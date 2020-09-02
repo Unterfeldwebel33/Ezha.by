@@ -23,7 +23,7 @@
         android:id="@+id/sortTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/montserrat_medium"
         android:layout_marginVertical="4dp"
         android:layout_marginHorizontal="20dp"
         android:textSize="14sp"
