@@ -11,5 +11,6 @@
     <string name="sign_in">Войти</string>
     <string name="callBack">Связаться с нами</string>
     <string name="about">О приложении</string>
+    <string name="powered_by">Рвзработчик - Пётр Баркун</string>
 
 </resources>
