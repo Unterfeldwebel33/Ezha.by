@@ -8,4 +8,8 @@
     <string name="Desserts">Десерты</string>
     <string name="WOK">Лапша WOK</string>
     <string name="Donner">Шаурма</string>
+    <string name="sign_in">Войти</string>
+    <string name="callBack">Связаться с нами</string>
+    <string name="about">О приложении</string>
+
 </resources>
