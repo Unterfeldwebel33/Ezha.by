@@ -34,7 +34,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
+            android:layout_height="?actionBarSize"
+            android:elevation="4dp">
 
             <ImageView
                 android:id="@+id/menu_icon"
@@ -208,6 +209,40 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="ТЦ Palazzo"
+                android:textColor="@color/textSecondary"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/bodycolor"
+                app:backgroundTint="@color/bodycolor"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@drawable/iit"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="ИИТ БГУИР"
                 android:textColor="@color/textSecondary"
                 android:textSize="20sp"
                 android:textStyle="bold"></TextView>

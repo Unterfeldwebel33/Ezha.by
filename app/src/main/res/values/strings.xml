@@ -2,15 +2,22 @@
     <string name="app_name">Ezha</string>
     <string name="startbutton">Выбрать фудкорт</string>
     <string name="AllFoodCourt">Все фудкорты</string>
-    <string name="Burgers">Бургеры</string>
-    <string name="Sushi">Суши</string>
-    <string name="Pizza">Пицца</string>
-    <string name="Desserts">Десерты</string>
-    <string name="WOK">Лапша WOK</string>
-    <string name="Donner">Шаурма</string>
     <string name="sign_in">Войти</string>
     <string name="callBack">Связаться с нами</string>
     <string name="about">О приложении</string>
     <string name="powered_by">Рвзработчик - Пётр Баркун</string>
+    <string name="aboutApp">О приложении</string>
+    <string name="CallUs">Связаться с нами</string>
+    <string name="Burgers">Бургеры</string>
+    <string name="Sushi">Суши</string>
+    <string name="Pizza">Пицца</string>
+    <string name="Desserts">Дессерты</string>
+    <string name="WOK">Лапша WOK</string>
+    <string name="Doner">Шаурма</string>
+    <string name="McDonalds">McDonalds</string>
+    <string name="KFC">KFC</string>
+    <string name="BurgerKing">BurgerKing</string>
+    <string name="Salateria">Salateria</string>
+    <string name="coupons">Акции и купоны</string>
 
 </resources>
