@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "572935291601",
+    "firebase_url": "https://ezha-by.firebaseio.com",
+    "project_id": "ezha-by",
+    "storage_bucket": "ezha-by.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572935291601:android:24b2c5842919bf6da83bf0",
+        "android_client_info": {
+          "package_name": "com.example.ezhaby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572935291601-o3un042c2813u8o2ir8fcuvspfrv49q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6BYzbdRrZ4FlfcWZMouFyJ2hSyANnKmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572935291601-o3un042c2813u8o2ir8fcuvspfrv49q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
