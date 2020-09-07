@@ -9,12 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.ezhaby.Helper.Classes.Home.Adapter.SortAdapter;
 import com.example.ezhaby.Helper.Classes.Home.Adapter.SortHelperClass;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -23,6 +29,7 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
 
     //Верхняя карусель сортировки
     RecyclerView sortRecycler;
+    SortAdapter.RecyclerVievClickListener listener;
     RecyclerView.Adapter adapter;
     ImageView menuIcon;
 
@@ -45,9 +52,11 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
 
         //Вызов функций
+        setOnClickListener();
         sortRecycler();
         navigationDrawer();
     }
+
 
     //отрисовка появления меню
     private void navigationDrawer() {
@@ -91,6 +100,93 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
         return true;
     }
 
+    //включение по нажатию нижнего модального окна и сортировка(не до конца готово)
+    private void setOnClickListener() {
+        listener = new SortAdapter.RecyclerVievClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+
+                //разбиты и по отдельности расписаны исключения для сортировок
+                switch (position) {
+                    case 0:
+
+                    final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                            FoodcourtActivity.this, R.style.BottomSheet);
+                    View bottomsheet = LayoutInflater.from(getApplicationContext())
+                            .inflate(R.layout.bottom_sheet_sort_layout,
+                                    (LinearLayout) findViewById(R.id.bottomSheetCont));
+
+                    //Переходы на уровне модального окна
+                    bottomsheet.findViewById(R.id.contLayoutTwo).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(FoodcourtActivity.this, "Пока не работает, скоро все будет", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    bottomsheet.findViewById(R.id.contLayoutThree).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(FoodcourtActivity.this, "Пока не работает, скоро все будет", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    bottomsheet.findViewById(R.id.contLayoutFour).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(FoodcourtActivity.this, "Пока не работает, скоро все будет", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    bottomSheetDialog.setContentView(bottomsheet);
+                    bottomSheetDialog.show();
+
+                    break;
+
+                    case 1:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по бургерам", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 2:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по суши", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 3:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по пицце", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 4:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по дессертам", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 5:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по лапше WOK", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 6:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по Шаурме", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 7:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по Маку", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 8:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по КФС", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 9:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по БК", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 10:
+                        Toast.makeText(FoodcourtActivity.this, "Сортировка по Салатерии", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        };
+    }
+
     //отрисовка карусели сортировки
     private void sortRecycler() {
         sortRecycler.setHasFixedSize(true);
@@ -109,9 +205,9 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
         sortLocations.add(new SortHelperClass(R.drawable.ic_fake,getString(R.string.BurgerKing)));
         sortLocations.add(new SortHelperClass(R.drawable.ic_fake,getString(R.string.Salateria)));
 
-
-        adapter = new SortAdapter(sortLocations);
+        adapter = new SortAdapter(sortLocations,listener);
         sortRecycler.setAdapter(adapter);
+
     }
 
 }

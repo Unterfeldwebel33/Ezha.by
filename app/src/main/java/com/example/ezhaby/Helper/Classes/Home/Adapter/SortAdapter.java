@@ -16,9 +16,11 @@ import java.util.ArrayList;
 public class SortAdapter extends RecyclerView.Adapter<SortAdapter.SortVievHolder> {
 
     ArrayList<SortHelperClass> sortLocations;
+    private RecyclerVievClickListener listener;
 
-    public SortAdapter (ArrayList<SortHelperClass> sortLocations) {
+    public SortAdapter (ArrayList<SortHelperClass> sortLocations, RecyclerVievClickListener listener) {
         this.sortLocations = sortLocations;
+        this.listener = listener;
     }
 
     @NonNull
@@ -43,7 +45,11 @@ public class SortAdapter extends RecyclerView.Adapter<SortAdapter.SortVievHolder
         return sortLocations.size() ;
     }
 
-    public class SortVievHolder extends RecyclerView.ViewHolder{
+    public interface RecyclerVievClickListener{
+        void onClick(View v, int position);
+    }
+
+    public class SortVievHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView image;
         TextView title;
@@ -53,6 +59,14 @@ public class SortAdapter extends RecyclerView.Adapter<SortAdapter.SortVievHolder
 
             image = itemView.findViewById(R.id.sortImage);
             title = itemView.findViewById(R.id.sortTitle);
+            itemView.setOnClickListener(this);
+        }
+
+        //обработка нажатия
+        @Override
+        public void onClick(View v) {
+            listener.onClick(itemView, getAdapterPosition());
+
         }
     }
 }

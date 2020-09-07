@@ -18,6 +18,7 @@
     <string name="KFC">KFC</string>
     <string name="BurgerKing">BurgerKing</string>
     <string name="Salateria">Salateria</string>
-    <string name="coupons">Акции и купоны</string>
+    <string name="coupons">Акции и купоны (скоро)</string>
+    <string name="whatShowFirst">Какие фудкорты показывать сразу?</string>
 
 </resources>

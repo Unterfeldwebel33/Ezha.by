@@ -5,29 +5,28 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SplashScreen"
-    android:background="@color/colorPrimary">
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
 
-    <ImageView
-        android:id="@+id/background_image"
+    <LinearLayout
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="60dp"
-        android:src="@drawable/ic_splash_img"
-        tools:layout_editor_absoluteX="60dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_pattern"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/poweredBy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/powered_by"
-        android:textColor="@color/textSecondary"
-        app:layout_constraintBottom_toBottomOf="@+id/background_image"
-        app:layout_constraintEnd_toEndOf="@+id/background_image"
-        app:layout_constraintStart_toStartOf="@+id/background_image" />
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="60dp"
+            android:src="@drawable/ic_splash_img"
+            tools:layout_editor_absoluteX="60dp" />
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
