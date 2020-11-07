@@ -11,19 +11,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.ezhaby.Helper.Classes.Home.Adapter.SortAdapter;
 import com.example.ezhaby.Helper.Classes.Home.Adapter.SortHelperClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FoodcourtActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,6 +39,16 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
     //Боковое меню
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+
+    //Список фудкортов которые вызываются из бд
+    ListView foodcourtView;
+    ArrayAdapter<String> nameAdapter;
+    List<String> nameData;
+    DatabaseReference ezhaDataBase;
+    String FOODCOURTS_KEY = "foodcourts";
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +68,8 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
         setOnClickListener();
         sortRecycler();
         navigationDrawer();
+        init();
+        //getFoodcourtsFromDB();
     }
 
 
@@ -71,6 +86,41 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
 
     }
 
+    //функция для вывода значений фудкорта
+    private void init()
+    {
+        foodcourtView = findViewById(R.id.foodcourtView);
+        nameData = new ArrayList<>();
+        nameAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, nameData);
+        foodcourtView.setAdapter(nameAdapter);
+        ezhaDataBase = FirebaseDatabase.getInstance().getReference(FOODCOURTS_KEY);
+    }
+
+    //Вывод данных из бд
+   /* private void getFoodcourtsFromDB()
+    {
+        ValueEventListener vfListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (nameData.size()>0)nameData.clear();
+                for (DataSnapshot ds: dataSnapshot.getChildren())
+                {
+                    Foodcourt foodcourt = ds.getValue(Foodcourt.class);
+                    assert foodcourt != null;
+                    nameData.add(foodcourt.name);
+                }
+                nameAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        };
+        ezhaDataBase.addValueEventListener(vfListener);
+    }*/
+
     //Закрытие меню по кнопке назад
     @Override
     public void onBackPressed(){
@@ -81,12 +131,19 @@ public class FoodcourtActivity extends AppCompatActivity implements NavigationVi
             super.onBackPressed();
     }
 
-
     //Дает возможность перейти куда-нибудь из меню меню
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         switch (item.getItemId()){
+
+            case  R.id.nav_sign_in:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                break;
+
+            case  R.id.nav_coupons:
+                Toast.makeText(FoodcourtActivity.this, "Пока не работает, скоро все будет", Toast.LENGTH_SHORT).show();
+                break;
 
             case  R.id.nav_callback:
                 startActivity(new Intent(getApplicationContext(), CallbackActivity.class));
