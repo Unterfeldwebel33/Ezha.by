@@ -10,8 +10,8 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        app:layout_constraintTop_toTopOf="parent"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/back_pressed"
@@ -65,88 +65,25 @@
             android:textColor="@color/textPrimary"
             android:textSize="14sp"
             android:transitionName="sec_text_tran" />
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/UserEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:transitionName="email_tran">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Введите Ваш E-mail" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/UserPass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:transitionName="pass_tran">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Введите пароль"
-                    app:passwordToggleEnabled="true" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-        android:id="@+id/CreateAcc"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/google_signIn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/buttoncolor"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#3F51B5"
         android:fontFamily="@font/montserrat_semibold"
         android:letterSpacing="0"
         android:minHeight="60dp"
-        android:text="Войти"
+        android:text="Войти c помощью Google"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:transitionName="go_tran"
-        app:cornerRadius="10dp" />
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/google_signIn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#3F51B5"
-            android:fontFamily="@font/montserrat_semibold"
-            android:letterSpacing="0"
-            android:minHeight="60dp"
-            android:text="Войти c помощью Google"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:transitionName="go_tran"
-            app:cornerRadius="10dp" />
 
-    </LinearLayout>
-
-    <TextView
-        android:transitionName="change_tran"
-        android:id="@+id/signup"
-        android:layout_marginBottom="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Первый раз тут? Создать аккаунт"
-        android:textAlignment="center"
-        android:textColor="@color/textPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
